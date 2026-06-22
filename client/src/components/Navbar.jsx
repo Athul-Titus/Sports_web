@@ -74,7 +74,7 @@ export default function Navbar() {
           scrolled ? 'shadow-[0_4px_30px_rgba(0,0,0,0.6)]' : '',
         ].join(' ')}
       >
-        <div className="flex items-center justify-between h-full max-w-[1440px] mx-auto px-5 md:px-16">
+        <div className="flex items-center justify-between h-full max-w-[1440px] mx-auto px-6 md:px-16">
 
           {/* ── Wordmark ────────────────────────────────────────────────────
               Anton font, 32px (headline-md), all-caps "VANTAGE"
