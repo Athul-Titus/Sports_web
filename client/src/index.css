@@ -1,0 +1,262 @@
+/* =============================================================================
+   VantaGe Sports Consultancy — Global Design System
+   Based on Stitch Project: VantaGe Athletic Excellence
+   Color Mode: LIGHT | Aesthetic: Bold / High-Contrast / Stadium Classic
+   ============================================================================= */
+
+@import "tailwindcss";
+
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* ── Design Token Theme ───────────────────────────────────────────────────── */
+@theme {
+  /* --- Color Palette: Stadium Classic (Black + White + Burnt Orange) --- */
+  --color-primary:                  #000000;
+  --color-on-primary:               #ffffff;
+  --color-primary-container:        #1b1b1b;
+  --color-on-primary-container:     #848484;
+  --color-primary-fixed:            #e2e2e2;
+  --color-primary-fixed-dim:        #c6c6c6;
+  --color-on-primary-fixed:         #1b1b1b;
+  --color-on-primary-fixed-variant: #474747;
+  --color-inverse-primary:          #c6c6c6;
+
+  /* Burnt Orange — the "Ignition" accent */
+  --color-secondary:                #9a4612;
+  --color-on-secondary:             #ffffff;
+  --color-secondary-container:      #fd925a;
+  --color-on-secondary-container:   #712c00;
+  --color-secondary-fixed:          #ffdbcb;
+  --color-secondary-fixed-dim:      #ffb692;
+  --color-on-secondary-fixed:       #341100;
+  --color-on-secondary-fixed-variant: #7a3000;
+
+  /* Warm Taupe — subtle depth / secondary panels */
+  --color-tertiary:                 #000000;
+  --color-on-tertiary:              #ffffff;
+  --color-tertiary-container:       #2e140b;
+  --color-on-tertiary-container:    #a47a6c;
+  --color-tertiary-fixed:           #ffdbcf;
+  --color-tertiary-fixed-dim:       #ecbcac;
+  --color-on-tertiary-fixed:        #2e140b;
+  --color-on-tertiary-fixed-variant: #603f32;
+
+  /* Surface Layers */
+  --color-surface:                  #f9f9f9;
+  --color-surface-dim:              #dadada;
+  --color-surface-bright:           #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low:    #f3f3f4;
+  --color-surface-container:        #eeeeee;
+  --color-surface-container-high:   #e8e8e8;
+  --color-surface-container-highest:#e2e2e2;
+  --color-surface-tint:             #5e5e5e;
+  --color-surface-variant:          #e2e2e2;
+  --color-inverse-surface:          #2f3131;
+  --color-inverse-on-surface:       #f0f1f1;
+
+  /* On-Surface Text */
+  --color-on-surface:               #1a1c1c;
+  --color-on-surface-variant:       #4c4546;
+
+  /* Background */
+  --color-background:               #f9f9f9;
+  --color-on-background:            #1a1c1c;
+
+  /* Borders */
+  --color-outline:                  #7e7576;
+  --color-outline-variant:          #cfc4c5;
+
+  /* Error */
+  --color-error:                    #ba1a1a;
+  --color-on-error:                 #ffffff;
+  --color-error-container:          #ffdad6;
+  --color-on-error-container:       #93000a;
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  /* Display XL — Anton, 96px */
+  --font-display-xl: 'Anton', sans-serif;
+  --font-size-display-xl: 96px;
+  --line-height-display-xl: 90px;
+
+  /* Headline LG — Anton, 48px */
+  --font-headline-lg: 'Anton', sans-serif;
+  --font-size-headline-lg: 48px;
+  --line-height-headline-lg: 48px;
+  --letter-spacing-headline-lg: 0.02em;
+
+  /* Headline LG Mobile — Anton, 32px */
+  --font-headline-lg-mobile: 'Anton', sans-serif;
+  --font-size-headline-lg-mobile: 32px;
+  --line-height-headline-lg-mobile: 32px;
+
+  /* Headline MD — Anton, 24px */
+  --font-headline-md: 'Anton', sans-serif;
+  --font-size-headline-md: 24px;
+  --line-height-headline-md: 28px;
+
+  /* Body LG — Hanken Grotesk, 18px */
+  --font-body-lg: 'Hanken Grotesk', sans-serif;
+  --font-size-body-lg: 18px;
+  --line-height-body-lg: 28px;
+
+  /* Body MD — Hanken Grotesk, 16px */
+  --font-body-md: 'Hanken Grotesk', sans-serif;
+  --font-size-body-md: 16px;
+  --line-height-body-md: 24px;
+
+  /* Label Caps — Archivo Narrow, 12px, uppercase */
+  --font-label-caps: 'Archivo Narrow', sans-serif;
+  --font-size-label-caps: 12px;
+  --line-height-label-caps: 16px;
+  --letter-spacing-label-caps: 0.1em;
+
+  /* Data Mono — JetBrains Mono, 14px */
+  --font-data-mono: 'JetBrains Mono', monospace;
+  --font-size-data-mono: 14px;
+  --line-height-data-mono: 20px;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --spacing-base:           8px;
+  --spacing-gutter:         24px;
+  --spacing-margin-mobile:  16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-track-gap:      4px;
+}
+
+/* ── Base Styles ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1a1c1c;
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Track Lane Brand Motif ───────────────────────────────────────────────── */
+/* 3 parallel lines (1px width, 4px apart) — core brand signature */
+.track-lane-horizontal {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #9a4612, #9a4612 1px,
+    transparent 1px, transparent 5px
+  );
+  height: 13px;
+}
+
+.track-lane-vertical {
+  background-image: repeating-linear-gradient(
+    to right,
+    #9a4612, #9a4612 1px,
+    transparent 1px, transparent 5px
+  );
+  width: 13px;
+}
+
+/* ── Action Slant ─────────────────────────────────────────────────────────── */
+/* 10-degree shear on containers to imply forward movement / speed */
+.action-slant {
+  transform: skewX(-10deg);
+}
+
+.action-slant-reverse {
+  transform: skewX(10deg);
+}
+
+/* ── Typography Utilities ─────────────────────────────────────────────────── */
+.font-display-xl {
+  font-family: 'Anton', sans-serif;
+  font-size: 96px;
+  line-height: 90px;
+  font-weight: 400;
+}
+
+.font-headline-lg {
+  font-family: 'Anton', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.font-headline-lg-mobile {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.font-headline-md {
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-body-lg {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-label-caps {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.font-data-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+/* ── Selection Color ──────────────────────────────────────────────────────── */
+::selection {
+  background-color: #9a4612;
+  color: #ffffff;
+}
+
+/* ── Scrollbar Styling ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9a4612;
+  border-radius: 0;
+}
