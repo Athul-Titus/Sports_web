@@ -1,131 +1,84 @@
 /* =============================================================================
    VantaGe Sports Consultancy — Global Design System
-   Based on Stitch Project: VantaGe Athletic Excellence
-   Color Mode: LIGHT | Aesthetic: Bold / High-Contrast / Stadium Classic
+   Based on Stitch Screen: "Home | VantaGe Sports (Refined)" — DARK MODE
+   Color Mode: DARK | Aesthetic: Cinematic Dark / High-Contrast / Red Accent
    ============================================================================= */
 
 @import "tailwindcss";
 
 /* ── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
-/* ── Design Token Theme ───────────────────────────────────────────────────── */
+/* ── Design Token Theme (matches Stitch "Refined" dark screen exactly) ─────── */
 @theme {
-  /* --- Color Palette: Stadium Classic (Black + White + Burnt Orange) --- */
-  --color-primary:                  #000000;
-  --color-on-primary:               #ffffff;
-  --color-primary-container:        #1b1b1b;
-  --color-on-primary-container:     #848484;
-  --color-primary-fixed:            #e2e2e2;
-  --color-primary-fixed-dim:        #c6c6c6;
-  --color-on-primary-fixed:         #1b1b1b;
-  --color-on-primary-fixed-variant: #474747;
-  --color-inverse-primary:          #c6c6c6;
+  /* --- Surfaces --- */
+  --color-background:                #131313;
+  --color-on-background:             #e5e2e1;
+  --color-surface:                   #131313;
+  --color-surface-dim:               #131313;
+  --color-surface-bright:            #393939;
+  --color-surface-container-lowest:  #0e0e0e;
+  --color-surface-container-low:     #1c1b1b;
+  --color-surface-container:         #201f1f;
+  --color-surface-container-high:    #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-variant:           #353534;
+  --color-surface-tint:              #ffb4a9;
+  --color-inverse-surface:           #e5e2e1;
+  --color-inverse-on-surface:        #313030;
+  --color-on-surface:                #e5e2e1;
+  --color-on-surface-variant:        #e7bdb7;
 
-  /* Burnt Orange — the "Ignition" accent */
-  --color-secondary:                #9a4612;
-  --color-on-secondary:             #ffffff;
-  --color-secondary-container:      #fd925a;
-  --color-on-secondary-container:   #712c00;
-  --color-secondary-fixed:          #ffdbcb;
-  --color-secondary-fixed-dim:      #ffb692;
-  --color-on-secondary-fixed:       #341100;
-  --color-on-secondary-fixed-variant: #7a3000;
+  /* --- Primary (Red accent — "Heartbeat" of competition) --- */
+  --color-primary:                   #ffb4a9;
+  --color-on-primary:                #690001;
+  --color-primary-container:         #e2231a;
+  --color-on-primary-container:      #fffaff;
+  --color-inverse-primary:           #c00005;
+  --color-primary-fixed:             #ffdad5;
+  --color-primary-fixed-dim:         #ffb4a9;
+  --color-on-primary-fixed:          #410000;
+  --color-on-primary-fixed-variant:  #930003;
 
-  /* Warm Taupe — subtle depth / secondary panels */
-  --color-tertiary:                 #000000;
-  --color-on-tertiary:              #ffffff;
-  --color-tertiary-container:       #2e140b;
-  --color-on-tertiary-container:    #a47a6c;
-  --color-tertiary-fixed:           #ffdbcf;
-  --color-tertiary-fixed-dim:       #ecbcac;
-  --color-on-tertiary-fixed:        #2e140b;
-  --color-on-tertiary-fixed-variant: #603f32;
+  /* --- Secondary (neutral grey) --- */
+  --color-secondary:                 #c8c6c5;
+  --color-on-secondary:              #303030;
+  --color-secondary-container:       #474746;
+  --color-on-secondary-container:    #b6b5b4;
+  --color-secondary-fixed:           #e4e2e1;
+  --color-secondary-fixed-dim:       #c8c6c5;
+  --color-on-secondary-fixed:        #1b1c1c;
+  --color-on-secondary-fixed-variant:#474746;
 
-  /* Surface Layers */
-  --color-surface:                  #f9f9f9;
-  --color-surface-dim:              #dadada;
-  --color-surface-bright:           #f9f9f9;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low:    #f3f3f4;
-  --color-surface-container:        #eeeeee;
-  --color-surface-container-high:   #e8e8e8;
-  --color-surface-container-highest:#e2e2e2;
-  --color-surface-tint:             #5e5e5e;
-  --color-surface-variant:          #e2e2e2;
-  --color-inverse-surface:          #2f3131;
-  --color-inverse-on-surface:       #f0f1f1;
+  /* --- Tertiary (blue accent) --- */
+  --color-tertiary:                  #a1c9ff;
+  --color-on-tertiary:               #00325b;
+  --color-tertiary-container:        #0076cc;
+  --color-on-tertiary-container:     #fbfbff;
+  --color-tertiary-fixed:            #d3e4ff;
+  --color-tertiary-fixed-dim:        #a1c9ff;
+  --color-on-tertiary-fixed:         #001c38;
+  --color-on-tertiary-fixed-variant: #004880;
 
-  /* On-Surface Text */
-  --color-on-surface:               #1a1c1c;
-  --color-on-surface-variant:       #4c4546;
+  /* --- Outlines / Borders --- */
+  --color-outline:                   #ae8882;
+  --color-outline-variant:           #5d3f3b;
 
-  /* Background */
-  --color-background:               #f9f9f9;
-  --color-on-background:            #1a1c1c;
-
-  /* Borders */
-  --color-outline:                  #7e7576;
-  --color-outline-variant:          #cfc4c5;
-
-  /* Error */
-  --color-error:                    #ba1a1a;
-  --color-on-error:                 #ffffff;
-  --color-error-container:          #ffdad6;
-  --color-on-error-container:       #93000a;
-
-  /* ── Typography ─────────────────────────────────────────────────────────── */
-  /* Display XL — Anton, 96px */
-  --font-display-xl: 'Anton', sans-serif;
-  --font-size-display-xl: 96px;
-  --line-height-display-xl: 90px;
-
-  /* Headline LG — Anton, 48px */
-  --font-headline-lg: 'Anton', sans-serif;
-  --font-size-headline-lg: 48px;
-  --line-height-headline-lg: 48px;
-  --letter-spacing-headline-lg: 0.02em;
-
-  /* Headline LG Mobile — Anton, 32px */
-  --font-headline-lg-mobile: 'Anton', sans-serif;
-  --font-size-headline-lg-mobile: 32px;
-  --line-height-headline-lg-mobile: 32px;
-
-  /* Headline MD — Anton, 24px */
-  --font-headline-md: 'Anton', sans-serif;
-  --font-size-headline-md: 24px;
-  --line-height-headline-md: 28px;
-
-  /* Body LG — Hanken Grotesk, 18px */
-  --font-body-lg: 'Hanken Grotesk', sans-serif;
-  --font-size-body-lg: 18px;
-  --line-height-body-lg: 28px;
-
-  /* Body MD — Hanken Grotesk, 16px */
-  --font-body-md: 'Hanken Grotesk', sans-serif;
-  --font-size-body-md: 16px;
-  --line-height-body-md: 24px;
-
-  /* Label Caps — Archivo Narrow, 12px, uppercase */
-  --font-label-caps: 'Archivo Narrow', sans-serif;
-  --font-size-label-caps: 12px;
-  --line-height-label-caps: 16px;
-  --letter-spacing-label-caps: 0.1em;
-
-  /* Data Mono — JetBrains Mono, 14px */
-  --font-data-mono: 'JetBrains Mono', monospace;
-  --font-size-data-mono: 14px;
-  --line-height-data-mono: 20px;
+  /* --- Error --- */
+  --color-error:                     #ffb4ab;
+  --color-on-error:                  #690005;
+  --color-error-container:           #93000a;
+  --color-on-error-container:        #ffdad6;
 
   /* ── Spacing ─────────────────────────────────────────────────────────────── */
-  --spacing-base:           8px;
-  --spacing-gutter:         24px;
-  --spacing-margin-mobile:  16px;
-  --spacing-margin-desktop: 64px;
-  --spacing-track-gap:      4px;
+  --spacing-base:            8px;
+  --spacing-gutter:          24px;
+  --spacing-margin-mobile:   20px;
+  --spacing-margin-desktop:  64px;
+  --spacing-section-gap:     120px;
 }
 
-/* ── Base Styles ──────────────────────────────────────────────────────────── */
+/* ── Base Reset & Document ────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -140,52 +93,32 @@ html {
 }
 
 body {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #1a1c1c;
-  background-color: #f9f9f9;
+  color: #e5e2e1;
+  background-color: #131313;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* ── Track Lane Brand Motif ───────────────────────────────────────────────── */
-/* 3 parallel lines (1px width, 4px apart) — core brand signature */
-.track-lane-horizontal {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #9a4612, #9a4612 1px,
-    transparent 1px, transparent 5px
-  );
-  height: 13px;
+/* ── Material Symbols ─────────────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
-
-.track-lane-vertical {
-  background-image: repeating-linear-gradient(
-    to right,
-    #9a4612, #9a4612 1px,
-    transparent 1px, transparent 5px
-  );
-  width: 13px;
-}
-
-/* ── Action Slant ─────────────────────────────────────────────────────────── */
-/* 10-degree shear on containers to imply forward movement / speed */
-.action-slant {
-  transform: skewX(-10deg);
-}
-
-.action-slant-reverse {
-  transform: skewX(10deg);
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 /* ── Typography Utilities ─────────────────────────────────────────────────── */
-.font-display-xl {
+/* Anton — Display / Headlines */
+.font-display-lg {
   font-family: 'Anton', sans-serif;
-  font-size: 96px;
-  line-height: 90px;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: 0.02em;
   font-weight: 400;
 }
 
@@ -193,70 +126,90 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 48px;
   line-height: 48px;
-  font-weight: 400;
   letter-spacing: 0.02em;
+  font-weight: 400;
 }
 
 .font-headline-lg-mobile {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.font-headline-md {
   font-family: 'Anton', sans-serif;
   font-size: 32px;
   line-height: 32px;
   font-weight: 400;
 }
 
-.font-headline-md {
+.font-stats-number {
   font-family: 'Anton', sans-serif;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 24px;
   font-weight: 400;
 }
 
+/* Archivo Narrow — Body / Labels */
 .font-body-lg {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
 }
 
 .font-body-md {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.font-label-caps {
+.font-label-bold {
   font-family: 'Archivo Narrow', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
-  font-weight: 700;
   letter-spacing: 0.1em;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-.font-data-mono {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
+/* ── Brand FX Utilities ───────────────────────────────────────────────────── */
+/* Text glow — red halo on display headlines */
+.text-glow {
+  text-shadow: 0 0 10px rgba(226, 35, 26, 0.5);
 }
 
-/* ── Selection Color ──────────────────────────────────────────────────────── */
+/* Card hover glow — red outline glow on hover */
+.border-glow-hover:hover {
+  box-shadow: 0 0 15px rgba(226, 35, 26, 0.2);
+  border-color: #e2231a !important;
+}
+
+/* Diagonal clip — chamfered bottom-right corner on CTA blocks */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(0 40px, 40px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
 ::selection {
-  background-color: #9a4612;
+  background-color: #e2231a;
   color: #ffffff;
 }
 
-/* ── Scrollbar Styling ────────────────────────────────────────────────────── */
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #eeeeee;
+  background: #1c1b1b;
 }
-
 ::-webkit-scrollbar-thumb {
-  background-color: #9a4612;
+  background-color: #e2231a;
   border-radius: 0;
 }
