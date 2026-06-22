@@ -16,7 +16,7 @@ function PublicLayout() {
     <>
       {/* Navbar is fixed/sticky — main content gets top padding to clear it */}
       <Navbar />
-      <main className="pt-[64px] md:pt-[72px]">
+      <main className="pt-20">
         {/* Each route renders its page component here */}
         <Routes>
           <Route path="/"        element={<Home />}     />

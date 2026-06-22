@@ -1,13 +1,11 @@
 /* =============================================================================
    VantaGe Sports Consultancy — Global Design System
-   Based on Stitch Screen: "Home | VantaGe Sports (Refined)" — DARK MODE
-   Color Mode: DARK | Aesthetic: Cinematic Dark / High-Contrast / Red Accent
+   Stitch Screen: "Home | VantaGe Sports (Refined)" — DARK CINEMATIC MODE
+   Fonts: Anton (headlines) + Archivo Narrow (body/labels) — loaded via index.html
    ============================================================================= */
 
 @import "tailwindcss";
 
-/* ── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 /* ── Design Token Theme (matches Stitch "Refined" dark screen exactly) ─────── */
 @theme {
