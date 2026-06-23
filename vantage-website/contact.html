@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — VANTAGE Sports Consultancy</title>
+  <meta name="description" content="Get in touch with VantaGe Sports Consultancy. We are available for events, partnerships, and media inquiries." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23131313'/><text x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2231a' font-size='20' font-family='sans-serif' font-weight='bold'>V</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <?php include 'includes/navbar.html'; ?>
+
+  <section class="section" style="background: var(--clr-bg); padding-top: 140px;" id="contact-page">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash"></span>
+        <p style="font-family: var(--font-body); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clr-red);">— Reach Out</p>
+      </div>
+      <h1 class="text-h1" style="color: var(--clr-white); margin-bottom: 64px;">Get In Touch</h1>
+
+      <div class="contact-grid">
+
+        <!-- Contact form -->
+        <form
+          id="contact-form"
+          novalidate
+          onsubmit="handleContactSubmit(event)"
+        >
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Full Name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="contact-name"
+              name="name"
+              placeholder="John Doe"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input
+              class="form-input"
+              type="email"
+              id="contact-email"
+              name="email"
+              placeholder="john@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Subject</label>
+            <input
+              class="form-input"
+              type="text"
+              id="contact-subject"
+              name="subject"
+              placeholder="How can we help?"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea
+              class="form-textarea"
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your project or enquiry…"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="form-submit"
+            id="contact-submit"
+          >Send Message</button>
+
+          <!-- Alert messages (shown by JS) -->
+          <div class="form-alert" id="contact-success" role="alert">
+            ✓ Message sent — we will be in touch shortly.
+          </div>
+          <div class="form-alert" id="contact-error" role="alert" style="display:none;">
+            ✗ Something went wrong. Please try again.
+          </div>
+        </form>
+
+        <!-- Right-side info panel -->
+        <div>
+          <h2
+            class="text-h3"
+            style="color: var(--clr-white); margin-bottom: 24px;"
+          >Direct Contact</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 28px;">
+
+            <div>
+              <p class="text-label" style="color: var(--clr-red); margin-bottom: 8px;">Email</p>
+              <a
+                href="mailto:vantagellp@gmail.com"
+                class="text-body"
+                style="color: var(--clr-on-surface); text-decoration: none; transition: color .2s;"
+                onmouseover="this.style.color='var(--clr-red)'"
+                onmouseout="this.style.color='var(--clr-on-surface)'"
+              >vantagellp@gmail.com</a>
+            </div>
+
+            <div>
+              <p class="text-label" style="color: var(--clr-red); margin-bottom: 8px;">Availability</p>
+              <p class="text-body text-muted">Monday – Friday, 9:00 AM – 6:00 PM IST</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <?php include 'includes/footer.html'; ?>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /**
+     * handleContactSubmit
+     * Posts the form data to /api/contact.php as JSON.
+     * Shows success or error alert based on the response.
+     */
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      var form    = document.getElementById('contact-form');
+      var btn     = document.getElementById('contact-submit');
+      var success = document.getElementById('contact-success');
+      var error   = document.getElementById('contact-error');
+
+      /* Clear previous alerts */
+      success.style.display = 'none';
+      error.style.display   = 'none';
+
+      /* Disable button while submitting */
+      btn.disabled    = true;
+      btn.textContent = 'Sending…';
+
+      var data = {
+        name:    document.getElementById('contact-name').value.trim(),
+        email:   document.getElementById('contact-email').value.trim(),
+        subject: document.getElementById('contact-subject').value.trim(),
+        message: document.getElementById('contact-message').value.trim(),
+      };
+
+      fetch('api/contact.php', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
+            success.classList.add('success');
+            success.style.display = 'block';
+            form.reset();
+          } else {
+            error.textContent = '✗ ' + (json.message || 'Something went wrong.');
+            error.classList.add('error');
+            error.style.display = 'block';
+          }
+        })
+        .catch(function () {
+          error.classList.add('error');
+          error.style.display = 'block';
+        })
+        .finally(function () {
+          btn.disabled    = false;
+          btn.textContent = 'Send Message';
+        });
+    }
+  </script>
+</body>
+</html>

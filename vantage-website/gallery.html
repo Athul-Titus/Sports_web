@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — VANTAGE Sports Consultancy</title>
+  <meta name="description" content="Browse VantaGe Sports Consultancy's event gallery — high-performance sports, para-athletics, and world-class facilities." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23131313'/><text x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2231a' font-size='20' font-family='sans-serif' font-weight='bold'>V</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <?php include 'includes/navbar.html'; ?>
+
+  <section class="section" style="background: var(--clr-bg); padding-top: 140px;" id="gallery-page">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-dash"></span>
+        <h1 class="text-h2" style="color: var(--clr-white);">Gallery</h1>
+      </div>
+
+      <!-- Gallery grid — populated dynamically by gallery.js from /api/gallery.php -->
+      <div class="gallery-full-grid" id="gallery-grid" aria-label="Gallery images">
+        <!-- JS will render image cards here -->
+        <p id="gallery-loading" style="color: var(--clr-muted); grid-column: 1/-1; text-align: center; padding: 48px 0;">
+          Loading gallery…
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <?php include 'includes/footer.html'; ?>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

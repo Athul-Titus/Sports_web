@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>VANTAGE — Transform Sports</title>
+  <meta name="description" content="VantaGe Sports Consultancy delivers world-class sports event management, science-driven performance analysis, and inclusive athlete development." />
+  <meta name="theme-color" content="#131313" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="VANTAGE Sports Consultancy" />
+  <meta property="og:description" content="We don't just manage sports. We transform them." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23131313'/><text x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2231a' font-size='20' font-family='sans-serif' font-weight='bold'>V</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SHARED NAVBAR — included from includes/navbar.html via PHP.
+       For static preview, paste the navbar.html content directly here.
+       In PHP: <?php include 'includes/navbar.html'; ?>
+       ══════════════════════════════════════════════════════════════════════ -->
+  <?php include 'includes/navbar.html'; ?>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       Full-viewport height, stadium background image, dark overlay.
+       Anton display headlines — white line, red line with glow.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+
+    <!-- Background image -->
+    <div
+      class="hero__bg"
+      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBycU_Cnptpr_jXMiYb-6C8C913kZz7rkrQCRNejHaUzEL0oon6mm14eRyhRwA-ZwsCoXE_X0bFX40yO7lfgCZlrgHOKSUXTzhNXb733LeK3uncx8yJjKcsoknxfCn8LAduHuOxfE3OpUMrXfYHrBp8VQwgy2um0xwI5faDf207GHFiEGR1iCRoxJddddTVR8IHfcfXmPJmonXUnSETpTytiBybE8DxI-LkvjXKkXSkEhymQ_LJ7D5H-upAsghR8vY8FCjucuPapRM');"
+      role="img"
+      aria-label="Sprinters racing on a track at a large stadium"
+    ></div>
+
+    <!-- Dark overlay -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <h1 class="text-display hero__title">
+        WE DON'T JUST MANAGE SPORTS.
+      </h1>
+      <p class="text-display hero__title hero__title--red text-glow">
+        WE TRANSFORM THEM.
+      </p>
+      <a href="services.html" class="hero__cta" id="hero-cta">
+        Explore Our Services
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 2 — INTRO QUOTE
+       Dark panel (surface), large Anton quote, red keyword highlights.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="intro" id="performance" aria-label="Our Philosophy">
+    <!-- Ambient red glow (decorative) -->
+    <div class="intro__glow" aria-hidden="true"></div>
+
+    <div class="container">
+      <blockquote class="intro__quote">
+        "In a world where passion meets competition, sports deserve more than just effort
+        — they deserve
+        <span style="color: var(--clr-red);">precision</span>,
+        <span style="color: var(--clr-red);">innovation</span>, and
+        <span style="color: var(--clr-red);">heart</span>."
+      </blockquote>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 3 — WHAT WE DO (6 Service Cards)
+       3-col desktop, 2-col tablet, 1-col mobile.
+       Each card: dark bg, red corner diamond, filled icon, glow on hover.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="science" aria-label="What We Do" style="background: var(--clr-bg);">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash" aria-hidden="true"></span>
+        <h2 class="text-h2" style="color: var(--clr-white);">What We Do</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1: Event Management -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">stadium</span>
+          <h3 class="text-h3 service-card__title">Sports Event Management</h3>
+          <p class="service-card__desc">
+            Flawless execution for high-stakes athletic competitions, ensuring
+            seamless logistics and unforgettable experiences.
+          </p>
+        </article>
+
+        <!-- Card 2: Science & Biomechanics -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">analytics</span>
+          <h3 class="text-h3 service-card__title">Sports Science &amp; Biomechanics</h3>
+          <p class="service-card__desc">
+            Data-driven performance analysis leveraging cutting-edge telemetry
+            to optimize athlete mechanics.
+          </p>
+        </article>
+
+        <!-- Card 3: Inclusive Events -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">diversity_3</span>
+          <h3 class="text-h3 service-card__title">Inclusive Sports Events</h3>
+          <p class="service-card__desc">
+            Pioneering accessible platforms that champion para-athletes and
+            elevate inclusive competition standards.
+          </p>
+        </article>
+
+        <!-- Card 4: Medicine & Nutrition -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">health_and_safety</span>
+          <h3 class="text-h3 service-card__title">Sports Medicine &amp; Nutrition</h3>
+          <p class="service-card__desc">
+            Comprehensive protocols for injury prevention, recovery, and peak
+            physiological conditioning.
+          </p>
+        </article>
+
+        <!-- Card 5: Engineering & Facility -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">architecture</span>
+          <h3 class="text-h3 service-card__title">Sports Engineering &amp; Facility Design</h3>
+          <p class="service-card__desc">
+            Architecting elite training environments and competitive arenas
+            engineered for maximum performance.
+          </p>
+        </article>
+
+        <!-- Card 6: Educational Consultancy -->
+        <article class="service-card card-glow">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+          <span class="material-symbols-outlined service-card__icon" aria-hidden="true">school</span>
+          <h3 class="text-h3 service-card__title">Educational Consultancy &amp; Placements</h3>
+          <p class="service-card__desc">
+            Strategic career pathways and institutional guidance for the next
+            generation of sports professionals.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 4 — OUR VALUES (4-column icon strip)
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="values" id="values" aria-label="Our Values">
+    <div class="container">
+      <div class="values-grid">
+
+        <div class="value-item">
+          <span class="material-symbols-outlined value-item__icon" aria-hidden="true">speed</span>
+          <p class="value-item__label">Data-Driven Precision</p>
+        </div>
+
+        <div class="value-item">
+          <span class="material-symbols-outlined value-item__icon" aria-hidden="true">account_tree</span>
+          <p class="value-item__label">End-to-End Solutions</p>
+        </div>
+
+        <div class="value-item">
+          <span class="material-symbols-outlined value-item__icon" aria-hidden="true">groups</span>
+          <p class="value-item__label">Inclusivity</p>
+        </div>
+
+        <div class="value-item" style="border-right: none;">
+          <span class="material-symbols-outlined value-item__icon" aria-hidden="true">public</span>
+          <p class="value-item__label">Global Impact</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 5 — GALLERY PREVIEW
+       Featured masonry grid. Full gallery → gallery.html
+       Images are from Stitch design (Cloudinary / AIDA public CDN).
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section gallery-section" id="gallery-preview" aria-label="Gallery">
+    <div class="container">
+
+      <!-- Heading row -->
+      <div class="gallery-header">
+        <div class="section-heading" style="margin-bottom: 0;">
+          <span class="section-dash" aria-hidden="true"></span>
+          <h2 class="text-h2" style="color: var(--clr-white);">Gallery</h2>
+        </div>
+        <a href="gallery.html" class="gallery-header__link" id="gallery-view-all">
+          View Gallery
+          <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="gallery-grid" role="list">
+
+        <!-- Featured — 2 cols × 2 rows -->
+        <div
+          class="gallery-cell gallery-cell--featured"
+          role="listitem"
+          tabindex="0"
+          aria-label="Sprinter exploding from starting blocks, cinematic lighting"
+        >
+          <div
+            class="gallery-cell__img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKgp6lKML9El9OrFKtwzB5gbrGi_Cjv3D-15i1kxBDi2fAFn9XDyxr_bmLiDcf9QWn3avBsuyVbTPZ3JGxKVJgElzS0kJuDgyatvJLw8sL9EGAQWvMQmoS3piumIGcUqpq39-T509Bcp5U3jVmBySERiUco4UtBkFwZFV-rVeXp9VKLZjc8Ry8LamYVi2-dkFXo1vebixN2lVBqnIPawZFOXWUIYoRVpHhzehsEZgUZQzttP0iTUaxAWxRm8bjvpEghoo16C8yZbE');"
+          ></div>
+          <div class="gallery-cell__overlay"></div>
+        </div>
+
+        <!-- Top-right -->
+        <div
+          class="gallery-cell"
+          style="grid-column: 3/4; grid-row: 1/2;"
+          role="listitem"
+          tabindex="0"
+          aria-label="Para-athlete with carbon-fiber running blade"
+        >
+          <div
+            class="gallery-cell__img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCAD1mzzgKhyL8YoOGDveZ1j21Je0S_Cyq19O1xhyDWXnR8bUCXg_XiotTOBo5vZv9_kR7z5CueRbmVkizv5MSzO529T8cQfIriwexzWVdaU0uFgdpT_-CvJOOcpokN4rQbxQ22u6zrmcrRcxtps4vQRz9OHxDWrBRnbNF0dLfm91kIhJ0XsAXzXS4bFQe2Y2sDQf1HUioipaTc7JPXhyTe46FifFicRkb9YwQwIxwbdPzwFH9_QTwE8n2WLYZwrYbGvJNZjvl_Dc');"
+          ></div>
+          <div class="gallery-cell__overlay"></div>
+        </div>
+
+        <!-- Mid-right -->
+        <div
+          class="gallery-cell"
+          style="grid-column: 3/4; grid-row: 2/3;"
+          role="listitem"
+          tabindex="0"
+          aria-label="Sports telemetry analytics on glass screens"
+        >
+          <div
+            class="gallery-cell__img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd46tNUCxsQ8oGSMs2Qya4j2n4mQneTJyy1VYSWI3G_rIn7k0mUiN-96L2C7nw1MihY6_rJrXKxtIPj44XWgS_-TeObLE_K2z1Wkj5Eg_O02aKPH2UVgnjm9DGTPuwxaJrzhfxBHdX1dAL2KgSzUo-fIyYkuUHjLB0AUUP6BIDFaGJtFnvQswNcezNWlzIYKj8gqimR_0VejREtg69uz2O8zDnzphFtl8vC2FpuWckAgd8OC8cdYrLsx_L0M5hU82xSci5FZ7DDqI');"
+          ></div>
+          <div class="gallery-cell__overlay"></div>
+        </div>
+
+        <!-- Bottom-left -->
+        <div
+          class="gallery-cell"
+          style="grid-column: 1/2; grid-row: 3/4;"
+          role="listitem"
+          tabindex="0"
+          aria-label="Empty swimming pool at night with red lane line"
+        >
+          <div
+            class="gallery-cell__img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGfAiWkFJuYa-w_sS6zjNfkonCBRlHDO1derpeavCOut_-88O31GEM0o9UXBL_LJjCCBwQt32Srkm9EU5qflr65zDAON9JgUVVyzsJsQcSWhVCpJ9L3eTXYvGmig0ZME1PFttSvHifNmpFwdW92cVNkWzYk4T85yxTI2nIatVLRQsy0E1JPb5RlO0kSG8IAJLxDHH4jTrj5U7AbNyImwMJyl97xQa5LinccaJUtJyU6NX6rThnoSz-J7oA3wFb-IqBD-MwT-me4ZA');"
+          ></div>
+          <div class="gallery-cell__overlay"></div>
+        </div>
+
+        <!-- Bottom wide — spans 2 cols -->
+        <div
+          class="gallery-cell gallery-cell--wide"
+          role="listitem"
+          tabindex="0"
+          aria-label="Wheelchair rugby match, speed blur, red uniform accents"
+        >
+          <div
+            class="gallery-cell__img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAe6aVN1_g2BouOHzmWujLc8kjflla-OEHXN3HeLTa6Hs1hMorXaLGlBz8xakXcop_wOJCbFPvZVieheM8kt9LoNkHFgLV7cgX-pRpjxiHD5Z9pn5ky3MDQkxjltZ44KRZN67ZlrUJJgXXvZaHgN-fVrh5F39x5-7ra7PWbp2v9iOZ1DE_C_ua2kV5yWdoMaSZHMP1bb-EanJzvFJET03sCJqT7oHHlGwVe0t7B7-IztnguA8AzZqFq7YnfuHvk-U2BWsTpIBELy8c');"
+          ></div>
+          <div class="gallery-cell__overlay"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 6 — CTA BANNER
+       Red background, clip-diagonal chamfer, diagonal speed lines.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner" id="contact-cta" aria-label="Call to Action">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__pattern" aria-hidden="true"></div>
+      <h2 class="text-h1 cta-banner__heading">
+        Join us in shaping the future of sports —
+        one event, one athlete, one story at a time
+      </h2>
+      <a href="contact.html" class="cta-banner__btn" id="cta-contact-btn">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SHARED FOOTER
+       In PHP: <?php include 'includes/footer.html'; ?>
+       ══════════════════════════════════════════════════════════════════════ -->
+  <?php include 'includes/footer.html'; ?>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
