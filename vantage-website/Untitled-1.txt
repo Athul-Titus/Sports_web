@@ -1,0 +1,392 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>vantaGe Sports Consultancy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#712c00",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#fd925a",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-container": "#848484",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#a47a6c",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "outline": "#7e7576",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffdbcb",
+                        "tertiary": "#000000",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-secondary-fixed": "#341100",
+                        "on-surface-variant": "#4c4546",
+                        "tertiary-fixed-dim": "#ecbcac",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#603f32",
+                        "primary-container": "#1b1b1b",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface-tint": "#5e5e5e",
+                        "outline-variant": "#cfc4c5",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#2e140b",
+                        "secondary": "#9a4612",
+                        "background": "#f9f9f9",
+                        "secondary-fixed-dim": "#ffb692",
+                        "on-background": "#1a1c1c",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#2e140b",
+                        "inverse-primary": "#c6c6c6",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadada",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "surface-container-highest": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "track-gap": "4px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "label-caps": ["Archivo Narrow"],
+                        "display-xl": ["Anton"],
+                        "data-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-xl": ["96px", {"lineHeight": "90px", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .track-lane-vertical {
+            background-image: repeating-linear-gradient(to right, #9a4612, #9a4612 1px, transparent 1px, transparent 5px);
+            width: 13px;
+        }
+        .track-lane-horizontal {
+            background-image: repeating-linear-gradient(to bottom, #9a4612, #9a4612 1px, transparent 1px, transparent 5px);
+            height: 13px;
+        }
+        .action-slant {
+            transform: skewX(-10deg);
+        }
+        .action-slant-reverse {
+            transform: skewX(10deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-lg antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<header class="fixed docked full-width top-0 z-50 bg-background/90 backdrop-blur-md border-b-2 border-primary w-full">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-[1440px] mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight" href="#">vantaGe</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex space-x-gutter">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors duration-200" href="#">Performance</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors duration-200" href="#">Science</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors duration-200" href="#">Events</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors duration-200" href="#">Consultancy</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary transition-colors duration-200" href="#">About</a>
+</nav>
+<button class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary font-headline-md text-headline-md uppercase px-8 py-3 hover:bg-secondary transition-colors duration-300 action-slant">
+<span class="action-slant-reverse">Get in Touch</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-[80px] md:pt-[100px]">
+<!-- Full-bleed Hero -->
+<section class="relative w-full h-[819px] md:h-[921px] flex items-center justify-center overflow-hidden border-b-4 border-primary">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat filter grayscale-[30%] contrast-125" data-alt="A high-energy, high-contrast action shot featuring a mix of able-bodied and paralympic track athletes bursting from the starting blocks. The lighting is intense and dramatic, creating deep black shadows and bright highlights. A strong burnt orange color pop is present in the athletes' jerseys and the track lanes. The composition is dynamic and angled to imply extreme speed and forward kinetic motion." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBycU_Cnptpr_jXMiYb-6C8C913kZz7rkrQCRNejHaUzEL0oon6mm14eRyhRwA-ZwsCoXE_X0bFX40yO7lfgCZlrgHOKSUXTzhNXb733LeK3uncx8yJjKcsoknxfCn8LAduHuOxfE3OpUMrXfYHrBp8VQwgy2um0xwI5faDf207GHFiEGR1iCRoxJddddTVR8IHfcfXmPJmonXUnSETpTytiBybE8DxI-LkvjXKkXSkEhymQ_LJ7D5H-upAsghR8vY8FCjucuPapRM')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] px-margin-mobile md:px-margin-desktop">
+<div class="max-w-4xl action-slant bg-primary/80 backdrop-blur-sm p-6 md:p-12 border-l-4 border-secondary">
+<div class="action-slant-reverse">
+<div class="track-lane-horizontal w-32 mb-6"></div>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-on-primary uppercase mb-6 leading-none">
+                            WE DON'T JUST MANAGE SPORTS.<br>
+<span class="text-secondary">WE TRANSFORM THEM.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-8 max-w-2xl">
+                            Redefining Sports Excellence through Innovation &amp; Science.
+                        </p>
+<button class="inline-flex items-center justify-center bg-secondary text-on-secondary font-headline-md text-headline-md uppercase px-10 py-4 hover:bg-on-surface transition-colors duration-300 action-slant shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<span class="action-slant-reverse">Explore Our Services</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Strip -->
+<section class="w-full bg-surface-container-high border-b-2 border-primary py-16 md:py-24 relative overflow-hidden">
+<div class="absolute left-0 top-0 h-full track-lane-vertical opacity-20"></div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase leading-tight mb-8 md:mb-0">
+                        Where passion meets competition, sports deserve precision, innovation, and heart.
+                    </h2>
+</div>
+<div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-4 border-l-2 border-primary pl-0 md:pl-8">
+<div class="text-center md:text-left">
+<p class="font-data-mono text-headline-md text-secondary mb-1">X+</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Events Delivered</p>
+</div>
+<div class="text-center md:text-left">
+<p class="font-data-mono text-headline-md text-secondary mb-1">X+</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Athletes Supported</p>
+</div>
+<div class="text-center md:text-left">
+<p class="font-data-mono text-headline-md text-secondary mb-1">X+</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cities</p>
+</div>
+</div>
+</div>
+</section>
+<!-- "What We Do" Grid -->
+<section class="w-full bg-surface py-24 relative">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-primary pb-4">
+<div>
+<div class="track-lane-horizontal w-16 mb-4"></div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">What We Do</h2>
+</div>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary uppercase flex items-center group mt-4 md:mt-0 transition-colors" href="#">
+                        View All Services
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">stadium</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Sports Event Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">End-to-end execution of high-stakes competitive events with military precision.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">biotech</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Sports Science &amp; Biomechanics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Data-driven performance analysis to optimize athletic output and prevent injury.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">accessible_forward</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Inclusive Sports Events</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pioneering adaptive sports frameworks for universal competitive access.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">monitor_heart</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Sports Medicine &amp; Nutrition</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Holistic recovery and fueling strategies designed for elite physiology.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">architecture</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Sports Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Facility design and equipment innovation built for peak human performance.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative group hover:border-primary transition-colors duration-300">
+<div class="absolute top-0 right-0 w-8 h-8 overflow-hidden pointer-events-none">
+<div class="track-lane-horizontal w-full transform rotate-45 translate-x-3 -translate-y-2"></div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform origin-left">school</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-4">Educational Consultancy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Strategic pathways and placement for the next generation of sports professionals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- "Why VantaGe" Value Strip -->
+<section class="w-full bg-primary py-20 border-y-4 border-secondary">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x-0 lg:divide-x-2 divide-surface-tint">
+<div class="pt-6 sm:pt-0 lg:px-6 first:pl-0 last:pr-0">
+<h4 class="font-headline-md text-headline-md text-on-primary uppercase mb-3">Data-Driven Precision</h4>
+<p class="font-body-md text-body-md text-primary-fixed-dim">Every decision backed by rigorous biomechanical and statistical analysis.</p>
+</div>
+<div class="pt-6 sm:pt-0 lg:px-6">
+<h4 class="font-headline-md text-headline-md text-on-primary uppercase mb-3">End-to-End Solutions</h4>
+<p class="font-body-md text-body-md text-primary-fixed-dim">From concept to execution, we control the entire lifecycle of sports ecosystems.</p>
+</div>
+<div class="pt-6 sm:pt-0 lg:px-6">
+<h4 class="font-headline-md text-headline-md text-on-primary uppercase mb-3">Inclusivity</h4>
+<p class="font-body-md text-body-md text-primary-fixed-dim">Designing environments where athletes of all abilities compete at the highest level.</p>
+</div>
+<div class="pt-6 sm:pt-0 lg:px-6">
+<h4 class="font-headline-md text-headline-md text-on-primary uppercase mb-3">Global Impact</h4>
+<p class="font-body-md text-body-md text-primary-fixed-dim">Scaling local talent and infrastructure to meet international competitive standards.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Teaser -->
+<section class="w-full bg-surface-bright py-24">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">The Kinetic Path</h2>
+<a class="font-label-caps text-label-caps text-primary hover:text-secondary uppercase flex items-center group mt-4 md:mt-0 transition-colors" href="#">
+                        View Gallery
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+<div class="aspect-square bg-surface-dim relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-contrast black and white photo of an elite sprinter's starting blocks on a track. A single burnt orange track line bisects the frame diagonally, creating a sense of tension and imminent explosive movement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByFQcKGS24V__wSes3lkG9aV16OcFOJfK9c7LQQaMOekzn72TR97BNP1A3eX8nRKL2JJ68NFDWLFaP1rylq4hEKvAJe4uuz0JcEbSxhFSqKvt5eU2SQWmlWxsXp-8eOr7Es-qG1Mrrz8568I_A1Wk3ovL8bxDZ9q4uKgXHxEp3oUPihAUDcCtUa2AmrN_biU_zLcTVVqNA1n8HZJKryfskk9dXx0gMFcdhA6oza-MXt2TGu80GEvDDaQOGPTQsEc7g_BcOb6cTBvs')"></div>
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary px-2 py-1 font-label-caps text-[10px] uppercase">Elite</div>
+</div>
+<div class="aspect-square bg-surface-dim relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Dynamic shot of a wheelchair basketball player mid-shot, dramatically lit from above against a dark background. The rim of the hoop is a glowing burnt orange. The focus is intense, highlighting the biomechanics of the upper body." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbyGH9j31mtY5dRQ0zfYLV3HPmojFtUo3O4mr_w9bjclxnBX93e-tlBc13Fe3fuslPTGs8OVpzJ3JwXbob4xX0FBFR4bYtZ6DL1hjpjrS_uT8tgUE-aqd-Fqfq1gNu9c-06UuNLzjNvI9WL2scdFrnIitF_feQQ_fdICslv8IUEEKRwCIRw1zEe24P0WaNcsspq8qODB3ultYFCNfgqaxs_N8lCR6j1ggHbihGpQaW7SDWtdWfaunTKh8a6Ixqcc_DzxUAQytzZZI')"></div>
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary px-2 py-1 font-label-caps text-[10px] uppercase">Adaptive</div>
+</div>
+<div class="aspect-square bg-surface-dim relative overflow-hidden group hidden md:block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Abstract architectural photography of a modern sports facility interior. Sharp intersecting lines of steel and glass, with bright white lighting and a stark, industrial feel. A subtle orange structural beam adds a pop of brand color." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB29ZomAmhh11TIOAI9gm4zBIbK1ufDUOsY_KDxfd0zeB7VrgR_GV0r8bLMNLKOdmHiPEaslcnmiaDfVPe0fPgv9dMr1QkikIffqD9xWrk8prOVlP2jiaP166jwpg4z9U0eb7lqLEjpzFnL0jM_MtIdTJ5RbsIF59-ijz1Be6Sef4tzUxGh368T14NMBh3ZHRFx9uluhsjQd88Vmq4vPwtP9NAK0CxElRS3A-S5yzivlVWem-BagGG7zrr409WSBIJDcmHYMdGY-qA')"></div>
+</div>
+<div class="aspect-[16/9] md:aspect-square col-span-2 md:col-span-1 bg-surface-dim relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A sports scientist analyzing data on multiple screens in a dark, high-tech lab environment. The glow from the monitors illuminates their face. Overlay graphics of biomechanical skeletons are visible on the screens. High contrast, technical mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgk4tjRljCADeU7BlAMr-tQ1pQ51J_8mrU0tuFdqFi6ziMnkpjA_5evfDj-qXj9azTAk4muGNyeWL0Vqp7qD0Fm3VKcWJyc5_yp3qFV14lpz1EaZIvtUiqLju4Y62jnBkx-l3z2odgl1qUj0fEWyI4q9zpGL0q5A72zfoubyEuinAI5xs9bAQRvUVMOtq4a7wz5wRRPFFWQEKDTQLgmreUm3JxV_XO9Iq33ysD2O1Ip6c1nKGXnGzYXwbWcSM5fafM2huOlcMciE8')"></div>
+</div>
+<div class="aspect-square bg-surface-dim relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A wide shot of a massive, empty stadium illuminated by floodlights at night. The seating is entirely black, while the field lines are a stark, bright orange. The atmosphere is quiet but charged with anticipation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZYXRFJ5pgWYTlxZvVjycHSoCEn_aLHarSO_0IY3CrAKUJjlzJcOtLyRMHewFSnLtvqpID65yS4f7FWR5p8Z_xyOXhrbPGuvpAsg3mUnqarGcOX4QCmdd9fEU6nWEfqEAwWTAI-TumrcpXAQQC-Hyg0ESVCUdMETZq1qPOjoRFiDkV3PneP7kiRTsiF1Udj9GFiJ-JyUrrH7LCGBAb8NtKPKQYcToIYTlKnPF_tL1F049impQ7148BKzKr94LWY-kLwAx41EXpYqo')"></div>
+</div>
+<div class="aspect-square bg-surface-dim relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Extreme close-up of a runner's high-performance spike shoe impacting the synthetic track surface, kicking up a small cloud of dust. The image is highly detailed, showing the texture of the track and the engineering of the shoe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyiZQJB1zxEx5nqJ-m6K1eA6iLjGAt3yf9G73NPpyAViA6mvu3CXfZcGoVF_lVlrs345jFawviwKMjFI8v7olSCCYqiPs94o-cNifaq_ki8mXN35hGA9k_2aLkdMDaEXg5Lbtyasq9zB9EGrOS43oDJlQe7paQkuhUrYwh7nH8f4juRrB91WPpn4Hyixj5YEb4-DpTigKhwuAB7-OT8vKks7Io2S18DZqF7TCxCxhFHi9k6z5Dkn2WDhWGbRC5VMMYpjmR4cckpmA')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="w-full bg-secondary py-24 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="w-full h-full track-lane-vertical transform rotate-45 scale-150"></div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-secondary uppercase max-w-4xl mx-auto mb-10 leading-tight">
+                    Join us in shaping the future of sports — one event, one athlete, one story at a time.
+                </h2>
+<button class="inline-flex items-center justify-center bg-primary text-on-primary font-headline-md text-headline-md uppercase px-12 py-5 hover:bg-surface hover:text-primary transition-colors duration-300 border-2 border-primary shadow-[6px_6px_0px_0px_rgba(26,28,28,1)]">
+                    Contact Us
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-tertiary-container full-width border-t-4 border-secondary text-on-tertiary dark:text-on-tertiary-fixed font-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-[1440px] mx-auto w-full">
+<!-- Brand Column -->
+<div class="md:col-span-1 mb-8 md:mb-0">
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-4">vantaGe</h3>
+<p class="font-body-md text-on-tertiary/70 mb-4 pr-4">High-performance sports event management, scientific consultancy, and facility engineering.</p>
+<div class="flex space-x-4">
+<a aria-label="LinkedIn" class="text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline" href="#">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Twitter" class="text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline" href="#">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Links Column -->
+<div class="md:col-span-1 mb-8 md:mb-0">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Explore</h4>
+<ul class="space-y-3">
+<li><a class="font-label-caps text-label-caps text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline uppercase" href="#">Strategy</a></li>
+<li><a class="font-label-caps text-label-caps text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline uppercase" href="#">Analytics</a></li>
+<li><a class="font-label-caps text-label-caps text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline uppercase" href="#">Adaptive Sports</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div class="md:col-span-1 mb-8 md:mb-0">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Contact</h4>
+<ul class="space-y-3">
+<li class="flex items-center text-on-tertiary/70">
+<span class="material-symbols-outlined mr-2 text-sm">call</span>
+<span class="font-data-mono">+91 2205 2205</span>
+</li>
+<li class="flex items-center text-on-tertiary/70">
+<span class="material-symbols-outlined mr-2 text-sm">mail</span>
+<a class="hover:text-secondary-container transition-colors focus:outline-none focus:underline" href="mailto:vantagellp@gmail.com">vantagellp@gmail.com</a>
+</li>
+</ul>
+</div>
+<!-- Legal Column -->
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-label-caps text-label-caps text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline uppercase" href="#">Privacy Policy</a></li>
+<li><a class="font-label-caps text-label-caps text-on-tertiary/70 hover:text-secondary-container transition-colors focus:outline-none focus:underline uppercase" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-on-tertiary/20 text-center">
+<p class="font-label-caps text-label-caps text-on-tertiary/50 uppercase">© 2024 vantaGe Sports Consultancy. The Science of Sport.</p>
+</div>
+</div>
+</footer>
+</body></html>
