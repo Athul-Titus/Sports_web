@@ -3,34 +3,403 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
   <title>About — VANTAGE Sports Consultancy</title>
-  <meta name="description" content="Learn about VantaGe Sports Consultancy — our mission, team, and commitment to transforming sports worldwide." />
+  <meta name="description" content="Learn how VantaGe Sports Consultancy is redefining sports excellence through innovation, science, and relentless inclusivity." />
+  <meta name="theme-color" content="#131313" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="About VantaGe Sports Consultancy" />
+  <meta property="og:description" content="Redefining Sports Excellence through Innovation & Science." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23131313'/><text x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' fill='%23e2231a' font-size='20' font-family='sans-serif' font-weight='bold'>V</text></svg>" />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
-  <?php include 'includes/navbar.html'; ?>
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SHARED NAVBAR
+       ══════════════════════════════════════════════════════════════════════ -->
+  <?php include 'includes/navbar.php'; ?>
 
-  <!-- Page Hero -->
-  <section class="section" style="background: var(--clr-bg); padding-top: 140px;">
-    <div class="container">
-      <div class="section-heading">
-        <span class="section-dash"></span>
-        <p style="font-family: var(--font-body); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clr-red);">— About Us</p>
-      </div>
-      <h1 class="text-h1" style="color: var(--clr-white); margin-bottom: 32px;">
-        The Science of Sport
-      </h1>
-      <p class="text-body-lg text-muted" style="max-width: 640px;">
-        VantaGe Sports Consultancy is an end-to-end sports management and science firm
-        committed to transforming athletic performance, event quality, and sporting inclusivity
-        across the globe.
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 1 — HERO BANNER
+       Smaller variant of the home hero: 60vh, full-bleed stadium bg,
+       dark overlay, Anton headline + Archivo Narrow tagline.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="about-hero" id="about-hero" aria-label="About hero">
+
+    <!-- Background image — athlete motion blur, cinematic -->
+    <div
+      class="hero__bg"
+      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBycU_Cnptpr_jXMiYb-6C8C913kZz7rkrQCRNejHaUzEL0oon6mm14eRyhRwA-ZwsCoXE_X0bFX40yO7lfgCZlrgHOKSUXTzhNXb733LeK3uncx8yJjKcsoknxfCn8LAduHuOxfE3OpUMrXfYHrBp8VQwgy2um0xwI5faDf207GHFiEGR1iCRoxJddddTVR8IHfcfXmPJmonXUnSETpTytiBybE8DxI-LkvjXKkXSkEhymQ_LJ7D5H-upAsghR8vY8FCjucuPapRM');"
+      role="img"
+      aria-label="Athletes competing at a world-class stadium"
+    ></div>
+
+    <!-- Dark overlay -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Red accent line at top of content, matching the intro section style -->
+    <div class="about-hero__accent" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="about-hero__content">
+
+      <!-- Breadcrumb label -->
+      <p class="about-hero__eyebrow text-label text-red" aria-hidden="true">
+        — Our Story
       </p>
+
+      <!-- Main headline -->
+      <h1 class="text-display about-hero__title">
+        Our Story
+      </h1>
+
+      <!-- Tagline -->
+      <p class="about-hero__tagline text-body-lg">
+        Redefining Sports Excellence through Innovation &amp; Science
+      </p>
+
     </div>
   </section>
 
-  <?php include 'includes/footer.html'; ?>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 2 — VISION & MISSION
+       Two equal-width cards on desktop, stacked on mobile.
+       Each card: icon in red box + Anton heading + body copy.
+       Reuses: service-card, section-heading, section-dash, text-h2, text-h3
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="vision-mission"
+           style="background: var(--clr-bg);" aria-label="Vision and Mission">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash" aria-hidden="true"></span>
+        <h2 class="text-h2" style="color: var(--clr-white);">Our Direction</h2>
+      </div>
+
+      <!-- Two-column card grid — collapses to 1 col on mobile -->
+      <div class="vm-grid">
+
+        <!-- VISION card -->
+        <article class="vm-card card-glow" id="vision-card">
+          <span class="vm-card__diamond" aria-hidden="true"></span>
+
+          <!-- Icon box -->
+          <div class="vm-card__icon-wrap" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:32px;">
+              visibility
+            </span>
+          </div>
+
+          <!-- Label above heading -->
+          <p class="vm-card__label text-label text-red">Vision</p>
+
+          <h3 class="text-h3 vm-card__title">Our Vision</h3>
+
+          <p class="service-card__desc">
+            To revolutionize the sports industry with unparalleled standards
+            of professionalism, inclusivity, and innovation.
+          </p>
+        </article>
+
+        <!-- MISSION card -->
+        <article class="vm-card card-glow" id="mission-card">
+          <span class="vm-card__diamond" aria-hidden="true"></span>
+
+          <!-- Icon box -->
+          <div class="vm-card__icon-wrap" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:32px;">
+              flag
+            </span>
+          </div>
+
+          <!-- Label above heading -->
+          <p class="vm-card__label text-label text-red">Mission</p>
+
+          <h3 class="text-h3 vm-card__title">Our Mission</h3>
+
+          <p class="service-card__desc">
+            Empowering athletes and organizations with cutting-edge solutions
+            to redefine sports success nationally and internationally.
+          </p>
+        </article>
+
+      </div><!-- /.vm-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 3 — CHALLENGES WE SOLVE
+       3-column card grid. Each card has:
+         TOP    — challenge number tag (red label) + bold challenge title
+         DIVIDER — 1px red-tinted line
+         BOTTOM — "VantaGe Solution" label + solution copy
+       Background alternates to surface for contrast against the bg sections.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="challenges"
+           style="background: var(--clr-surface);" aria-label="Challenges We Solve">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash" aria-hidden="true"></span>
+        <h2 class="text-h2" style="color: var(--clr-white);">Challenges We Solve</h2>
+      </div>
+
+      <div class="challenge-grid">
+
+        <!-- Challenge 01 -->
+        <article class="challenge-card card-glow" id="challenge-01">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+
+          <!-- TOP: challenge number + title -->
+          <div class="challenge-card__top">
+            <p class="text-label text-red challenge-card__number">Challenge 01</p>
+            <h3 class="text-h3 challenge-card__title">Economic Barriers</h3>
+          </div>
+
+          <!-- Divider -->
+          <div class="challenge-card__divider" aria-hidden="true"></div>
+
+          <!-- BOTTOM: solution -->
+          <div class="challenge-card__bottom">
+            <p class="text-label challenge-card__solution-label">
+              VantaGe Solution
+            </p>
+            <p class="service-card__desc">
+              Cost-effective facilities &amp; investment partnerships
+            </p>
+          </div>
+        </article>
+
+        <!-- Challenge 02 -->
+        <article class="challenge-card card-glow" id="challenge-02">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+
+          <div class="challenge-card__top">
+            <p class="text-label text-red challenge-card__number">Challenge 02</p>
+            <h3 class="text-h3 challenge-card__title">Individual Challenges</h3>
+          </div>
+
+          <div class="challenge-card__divider" aria-hidden="true"></div>
+
+          <div class="challenge-card__bottom">
+            <p class="text-label challenge-card__solution-label">
+              VantaGe Solution
+            </p>
+            <p class="service-card__desc">
+              Personalized training, nutrition &amp; career guidance
+            </p>
+          </div>
+        </article>
+
+        <!-- Challenge 03 -->
+        <article class="challenge-card card-glow" id="challenge-03">
+          <span class="service-card__diamond" aria-hidden="true"></span>
+
+          <div class="challenge-card__top">
+            <p class="text-label text-red challenge-card__number">Challenge 03</p>
+            <h3 class="text-h3 challenge-card__title">National Challenges</h3>
+          </div>
+
+          <div class="challenge-card__divider" aria-hidden="true"></div>
+
+          <div class="challenge-card__bottom">
+            <p class="text-label challenge-card__solution-label">
+              VantaGe Solution
+            </p>
+            <p class="service-card__desc">
+              Preparing athletes to global standards
+            </p>
+          </div>
+        </article>
+
+      </div><!-- /.challenge-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 4 — WHY CHOOSE VANTAGE
+       4 rows. Each row: red icon box (left) + title + description (right).
+       Reuses value-item icon sizing and service-card border/hover logic.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="why-vantage"
+           style="background: var(--clr-bg);" aria-label="Why Choose VantaGe">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash" aria-hidden="true"></span>
+        <h2 class="text-h2" style="color: var(--clr-white);">Why Choose Vantage</h2>
+      </div>
+
+      <div class="why-list">
+
+        <!-- Row 1: Proven Track Record -->
+        <div class="why-item" id="why-track-record">
+          <div class="why-item__icon-box" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:28px;color:var(--clr-white);">
+              emoji_events
+            </span>
+          </div>
+          <div class="why-item__body">
+            <h3 class="text-h3 why-item__title">Proven Track Record</h3>
+            <p class="text-body text-muted why-item__desc">
+              Successful sports events &amp; consultations that have set
+              new benchmarks for professionalism across India.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2: Innovative Technology -->
+        <div class="why-item" id="why-technology">
+          <div class="why-item__icon-box" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:28px;color:var(--clr-white);">
+              monitor_heart
+            </span>
+          </div>
+          <div class="why-item__body">
+            <h3 class="text-h3 why-item__title">Innovative Technology</h3>
+            <p class="text-body text-muted why-item__desc">
+              Performance tracking &amp; analytics powered by the latest
+              biomechanical science and real-time telemetry.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 3: Tailored Services -->
+        <div class="why-item" id="why-tailored">
+          <div class="why-item__icon-box" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:28px;color:var(--clr-white);">
+              tune
+            </span>
+          </div>
+          <div class="why-item__body">
+            <h3 class="text-h3 why-item__title">Tailored Services</h3>
+            <p class="text-body text-muted why-item__desc">
+              Custom solutions for every client need — from grassroots
+              academies to elite national-level competitions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 4: Commitment to Excellence -->
+        <div class="why-item" id="why-excellence">
+          <div class="why-item__icon-box" aria-hidden="true">
+            <span class="material-symbols-outlined fill" style="font-size:28px;color:var(--clr-white);">
+              military_tech
+            </span>
+          </div>
+          <div class="why-item__body">
+            <h3 class="text-h3 why-item__title">Commitment to Excellence</h3>
+            <p class="text-body text-muted why-item__desc">
+              Pursuing perfection in every project — we set the standard
+              and then raise it.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.why-list -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 5 — MEASURING IMPACT
+       3 equal blocks. Each block: number/icon accent top + heading + body.
+       Background: surface-high, matching the values strip on index.html.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="values" id="measuring-impact" aria-label="Measuring Impact">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-dash" aria-hidden="true"></span>
+        <h2 class="text-h2" style="color: var(--clr-white);">Measuring Impact</h2>
+      </div>
+
+      <div class="impact-grid">
+
+        <!-- Block 1 -->
+        <div class="impact-block" id="impact-global">
+          <span
+            class="material-symbols-outlined fill impact-block__icon"
+            aria-hidden="true"
+          >public</span>
+          <h3 class="text-h3 impact-block__title">Global Representation</h3>
+          <p class="text-body text-muted impact-block__desc">
+            Evaluating India's increased participation &amp; success
+            internationally through VantaGe-backed programs.
+          </p>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="impact-block" id="impact-economy">
+          <span
+            class="material-symbols-outlined fill impact-block__icon"
+            aria-hidden="true"
+          >trending_up</span>
+          <h3 class="text-h3 impact-block__title">Economic Growth</h3>
+          <p class="text-body text-muted impact-block__desc">
+            Assessing sports programs' contribution to local economies
+            through employment, tourism, and infrastructure investment.
+          </p>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="impact-block" id="impact-athlete">
+          <span
+            class="material-symbols-outlined fill impact-block__icon"
+            aria-hidden="true"
+          >person_pin</span>
+          <h3 class="text-h3 impact-block__title">Athlete Development</h3>
+          <p class="text-body text-muted impact-block__desc">
+            Tracking progress with sports science: performance metrics,
+            injury reduction, and long-term career longevity.
+          </p>
+        </div>
+
+      </div><!-- /.impact-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 6 — CTA BANNER
+       Identical to index.html CTA — red bg, diagonal speed lines,
+       chamfer clip-path, dark button.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner" id="about-cta" aria-label="Call to Action">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__pattern" aria-hidden="true"></div>
+      <h2 class="text-h1 cta-banner__heading">
+        Join us in shaping the future of sports —
+        one event, one athlete, one story at a time.
+      </h2>
+      <a href="contact.html" class="cta-banner__btn" id="about-contact-btn">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SHARED FOOTER
+       ══════════════════════════════════════════════════════════════════════ -->
+  <?php include 'includes/footer.php'; ?>
+
+
+  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>

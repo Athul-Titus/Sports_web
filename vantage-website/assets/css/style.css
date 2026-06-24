@@ -1355,3 +1355,320 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   20. About Page
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── About Hero ─────────────────────────────────────────────────────────────
+   Smaller than the home hero: 65vh instead of 100vh.
+   Reuses .hero__bg and .hero__overlay from section 8.
+   ──────────────────────────────────────────────────────────────────────────*/
+.about-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: flex-end;   /* Content sits at the bottom of the frame */
+  border-bottom: 2px solid var(--clr-red);
+}
+
+/* Left red accent stripe — mirrors the intro section's border-top treatment */
+.about-hero__accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--clr-red);
+  transform: skewX(-12deg);
+  transform-origin: bottom left;
+  z-index: 3;
+}
+
+/* Content container */
+.about-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  padding-top: 120px;   /* Clears fixed navbar (80px) + breathing room */
+  padding-bottom: 72px;
+}
+
+@media (min-width: 768px) {
+  .about-hero__content {
+    padding-inline: 64px;
+  }
+}
+
+/* Eyebrow label above headline */
+.about-hero__eyebrow {
+  display: block;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+/* Hero headline — white, same .text-display token */
+.about-hero__title {
+  color: var(--clr-white);
+  margin-bottom: 20px;
+}
+
+/* Tagline — Archivo Narrow body-lg, muted white */
+.about-hero__tagline {
+  color: rgba(229, 226, 225, 0.80);   /* On-surface at 80% opacity */
+  max-width: 560px;
+  line-height: 1.55;
+}
+
+/* ── Vision & Mission Grid ──────────────────────────────────────────────────
+   2-column on tablet+, 1-column mobile.
+   ──────────────────────────────────────────────────────────────────────────*/
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-gutter);
+}
+
+@media (min-width: 768px) {
+  .vm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* VM card — extends service-card visual language */
+.vm-card {
+  position: relative;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  padding: 40px 36px 36px;
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+/* Corner diamond — identical to service-card__diamond */
+.vm-card__diamond {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--clr-red);
+  transform: translate(50%, -50%) rotate(45deg);
+  transition: transform 0.3s var(--ease);
+}
+.vm-card:hover .vm-card__diamond {
+  transform: translate(50%, -50%) rotate(45deg) scale(1.5);
+}
+
+/* Red icon box */
+.vm-card__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--clr-red);
+  margin-bottom: 28px;
+  flex-shrink: 0;
+  color: var(--clr-white);
+}
+
+/* VISION / MISSION label */
+.vm-card__label {
+  margin-bottom: 8px;
+}
+
+/* Card heading */
+.vm-card__title {
+  color: var(--clr-white);
+  margin-bottom: 16px;
+}
+
+/* ── Challenges Grid ────────────────────────────────────────────────────────
+   3-column on desktop, 1-column mobile.
+   Each card is split into a top challenge block and a bottom solution block.
+   ──────────────────────────────────────────────────────────────────────────*/
+.challenge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-gutter);
+}
+
+@media (min-width: 640px) {
+  .challenge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .challenge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Challenge card — inherits service-card base style */
+.challenge-card {
+  position: relative;
+  background: var(--clr-surface-low);
+  border: 1px solid var(--clr-border);
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP section — challenge label + title */
+.challenge-card__top {
+  padding: 32px 28px 28px;
+}
+
+/* Challenge number tag */
+.challenge-card__number {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* Challenge title */
+.challenge-card__title {
+  color: var(--clr-white);
+}
+
+/* Red divider line between top and bottom */
+.challenge-card__divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--clr-red) 0%,
+    rgba(226, 35, 26, 0.15) 100%
+  );
+  flex-shrink: 0;
+}
+
+/* BOTTOM section — solution label + solution text */
+.challenge-card__bottom {
+  padding: 24px 28px 32px;
+  flex: 1;
+  background: rgba(226, 35, 26, 0.04);  /* Very subtle red tint */
+}
+
+/* "VantaGe Solution" label */
+.challenge-card__solution-label {
+  color: var(--clr-muted);
+  margin-bottom: 10px;
+}
+
+/* ── Why Choose VantaGe — Row List ─────────────────────────────────────────
+   4 stacked rows. Each row: 64×64 red icon box + text block.
+   Rows separated by 1px border-bottom.
+   ──────────────────────────────────────────────────────────────────────────*/
+.why-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--clr-border);
+}
+
+/* Single row */
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--clr-border);
+  transition: background 0.2s var(--ease);
+}
+.why-item:hover {
+  background: rgba(226, 35, 26, 0.03);
+}
+
+/* Red square icon box */
+.why-item__icon-box {
+  width: 64px;
+  height: 64px;
+  background: var(--clr-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: filter 0.2s var(--ease);
+}
+.why-item:hover .why-item__icon-box {
+  filter: brightness(1.15);
+}
+
+/* Text block */
+.why-item__body {
+  flex: 1;
+}
+
+/* Title */
+.why-item__title {
+  color: var(--clr-white);
+  margin-bottom: 10px;
+}
+
+/* Description */
+.why-item__desc {
+  max-width: 680px;
+}
+
+/* ── Measuring Impact — 3-Block Grid ────────────────────────────────────────
+   Uses the existing .values background (surface-high / divider borders).
+   3-column on desktop, 1-column mobile.
+   The section reuses <section class="values"> so it inherits the
+   border-top/bottom and background automatically.
+   ──────────────────────────────────────────────────────────────────────────*/
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Single block */
+.impact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* Left-aligned unlike the centered values strip */
+  padding: 40px 32px;
+  border-right: 1px solid #474746;
+}
+.impact-block:last-child {
+  border-right: none;
+}
+
+/* On mobile — swap border-right for border-bottom */
+@media (max-width: 639px) {
+  .impact-block {
+    border-right: none;
+    border-bottom: 1px solid #474746;
+  }
+  .impact-block:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Large red icon */
+.impact-block__icon {
+  font-size: 48px;
+  color: var(--clr-red);
+  margin-bottom: 20px;
+}
+
+/* Title */
+.impact-block__title {
+  color: var(--clr-white);
+  margin-bottom: 12px;
+}
+
+/* Description */
+.impact-block__desc {
+  line-height: 1.65;
+}
